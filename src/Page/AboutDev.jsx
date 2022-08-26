@@ -1,18 +1,17 @@
-import React from 'react';
-import { Input, Form, Row, Col, Button, Table } from 'reactstrap';
-import { useEffect, useState } from 'react';
-import AboutDevService from '../Service/AboutDevService';
-import RoadToBeService from '../Service/RoadToBeService';
+import React from "react";
+import { Input, Form, Row, Col, Button, Table } from "reactstrap";
+import { useEffect, useState } from "react";
+import AboutDevService from "../Service/AboutDevService";
+import RoadToBeService from "../Service/RoadToBeService";
 
 const AboutDev = () => {
   const [aboutDev, setAboutDev] = useState([]);
   const [roadToBe, setRoadToBe] = useState([]);
-  const [titleAbout, setTitleAbout] = useState('');
-  const [subTitleAbout, setSubTitleAbout] = useState('');
-  const [contentAbout, setContentAbout] = useState('');
-  const [addNew, setAddNew] = useState('');
-
-  const [title, setTitle] = useState('');
+  const [titleAbout, setTitleAbout] = useState("");
+  const [subTitleAbout, setSubTitleAbout] = useState("");
+  const [contentAbout, setContentAbout] = useState("");
+  const [addNew, setAddNew] = useState("");
+  const [title, setTitle] = useState("");
 
   const getRoadToBe = () => {
     RoadToBeService.getRoadToBe()
@@ -21,14 +20,15 @@ const AboutDev = () => {
       })
       .catch((err) => console.log(err));
   };
-
-  useEffect(() => {
+  const getAboutDev = () => {
     AboutDevService.getAboutDev()
       .then((res) => {
         res.data.map((item) => setAboutDev(item));
       })
       .catch((err) => console.log(err));
-
+  };
+  useEffect(() => {
+    getAboutDev();
     getRoadToBe();
   }, []);
 
@@ -37,7 +37,17 @@ const AboutDev = () => {
       console.log(res);
     });
   };
-  console.log(addNew);
+  let f = aboutDev._id;
+  const handleUpdateAboutDev = async (id) => {
+    await AboutDevService.updateAboutDev(aboutDev._id, {
+      title: titleAbout,
+      subTitle: subTitleAbout,
+      content: contentAbout,
+    }).then((res) => {
+      console.log(res);
+    });
+    getAboutDev();
+  };
   const handleAddNew = async () => {
     await AboutDevService.addRoadTobe({ listContentItem: addNew });
     getRoadToBe();
@@ -45,7 +55,7 @@ const AboutDev = () => {
 
   const handleDelete = (id) => {
     console.log(id);
-    const confirm = window.confirm('Bạn muốn xóa hàng này?', id);
+    const confirm = window.confirm("Bạn muốn xóa hàng này?", id);
     if (confirm) {
       AboutDevService.deleteAboutDev(id);
       setRoadToBe(roadToBe.filter((item) => item._id !== id));
@@ -53,9 +63,9 @@ const AboutDev = () => {
   };
 
   return (
-    <Row className="form" style={{ width: '80%', margin: 'auto' }}>
+    <Row className="form" style={{ width: "80%", margin: "auto" }}>
       <Col>
-        <h1 style={{ textAlign: 'center' }}>AboutDev</h1>
+        <h1 style={{ textAlign: "center" }}>AboutDev</h1>
 
         <Table hover>
           <thead>
@@ -70,53 +80,54 @@ const AboutDev = () => {
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td
-                onChange={(e) => {
-                  console.log(e.target.value);
-                  setTitleAbout(e.target.value);
-                }}
-              >
-                {aboutDev.title}
-              </td>
-              <td
-                onChange={(e) => {
-                  console.log(e.target.value);
-                  setSubTitleAbout(e.target.value);
-                }}
-              >
-                {aboutDev.subTitle}
-              </td>
-              <td
-                onChange={(e) => {
-                  console.log(e.target.value);
-                  setContentAbout(e.target.value);
-                }}
-              >
-                {aboutDev.content}
-              </td>
+              <td>{aboutDev.title}</td>
+              <td>{aboutDev.subTitle}</td>
+              <td>{aboutDev.content}</td>
             </tr>
           </tbody>
         </Table>
 
         <Form>
-          <Input bsSize="lg-3" className="mb-3" placeholder="Title" />
-          <Input className="mb-3" placeholder="SubTitle" />
+          <Input
+            bsSize="lg-3"
+            className="mb-3"
+            placeholder="Title"
+            onChange={(e) => {
+              setTitleAbout(e.target.value);
+            }}
+          />
+          <Input
+            className="mb-3"
+            placeholder="SubTitle"
+            onChange={(e) => {
+              setSubTitleAbout(e.target.value);
+            }}
+          />
           <Input
             id="exampleText"
             name="text"
             type="textarea"
             placeholder="Content"
+            onChange={(e) => {
+              setContentAbout(e.target.value);
+            }}
           />
         </Form>
         <div>
-          <Button color="primary" href="#" tag="a" className="mt-3">
+          <Button
+            color="primary"
+            href="#"
+            tag="a"
+            className="mt-3"
+            onClick={() => handleUpdateAboutDev()}
+          >
             Update
-          </Button>{' '}
+          </Button>{" "}
         </div>
       </Col>
 
       <Col>
-        <h1 style={{ textAlign: 'center' }}>RoadToBe</h1>
+        <h1 style={{ textAlign: "center" }}>RoadToBe</h1>
         <Table hover>
           <thead>
             <tr>
@@ -128,7 +139,7 @@ const AboutDev = () => {
               <tr>
                 <th scope="row">{index + 1}</th>
                 <td>
-                  {' '}
+                  {" "}
                   <input
                     defaultValue={item.listContentItem}
                     onChange={(e) => {
@@ -146,17 +157,17 @@ const AboutDev = () => {
                     className="mt"
                   >
                     Update
-                  </Button>{' '}
+                  </Button>{" "}
                   <Button
                     onClick={() => handleDelete(item._id)}
-                    style={{ backgroundColor: 'red' }}
+                    style={{ backgroundColor: "red" }}
                     color="primary"
                     href="#"
                     tag="a"
                     className="mt"
                   >
                     Delete
-                  </Button>{' '}
+                  </Button>{" "}
                 </td>
               </tr>
             ))}
@@ -179,9 +190,9 @@ const AboutDev = () => {
             tag="input"
             type="reset"
             value="Add New"
-            style={{ backgroundColor: 'green' }}
+            style={{ backgroundColor: "green" }}
             onClick={() => handleAddNew()}
-          />{' '}
+          />{" "}
         </div>
       </Col>
     </Row>

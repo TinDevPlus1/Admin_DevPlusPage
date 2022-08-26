@@ -20,6 +20,9 @@ const AboutDevService = {
   addAboutDev(data) {
     return axiosClient.post('/aboutDev', data);
   },
+  updateAboutDev(id, data) {
+    return axiosClient.put('/aboutDev/' + id, data);
+  }
 };
 
 export default AboutDevService
