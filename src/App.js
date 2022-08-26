@@ -22,15 +22,15 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Banner" element={<Banner />} />
-          <Route path="/AboutDev" element={<AboutDev />} />
-          <Route path="/SkillBox" element={<SkillBox />} />
-          <Route path="/Campus" element={<Campus />} />
-          <Route path="/Admission" element={<Admission />} />
-          <Route path="/Concerns" element={<Concerns />} />
-          <Route path="/Carousel" element={<Carousel />} />
-          <Route path="/RoadToBe" element={<RoadToBe />} />
-          <Route path="/RightMenu" element={<RightMenu />} />
+          <Route path="/Admin/Banner" element={<Banner />} />
+          <Route path="/Admin/AboutDev" element={<AboutDev />} />
+          <Route path="/Admin/SkillBox" element={<SkillBox />} />
+          <Route path="/Admin/Campus" element={<Campus />} />
+          <Route path="/Admin/Admission" element={<Admission />} />
+          <Route path="/Admin/Concerns" element={<Concerns />} />
+          <Route path="/Admin/Carousel" element={<Carousel />} />
+          <Route path="/Admin/RoadToBe" element={<RoadToBe />} />
+          <Route path="/Admin/RightMenu" element={<RightMenu />} />
         </Routes>
       </BrowserRouter>
       <SideNav></SideNav>

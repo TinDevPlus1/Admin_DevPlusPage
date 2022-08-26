@@ -47,55 +47,55 @@ const SideNav = () => {
                                 </a>
                                 <ul className="nav nav-treeview">
                                     <li className="nav-item">
-                                        <a href="/Banner" className="nav-link">
+                                        <a href="/Admin/Banner" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>Banner</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/AboutDev" className="nav-link">
+                                        <a href="/Admin/AboutDev" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>About DevPlus</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/SkillBox" className="nav-link">
+                                        <a href="/Admin/SkillBox" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>Skill Box</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/Campus" className="nav-link">
+                                        <a href="/Admin/Campus" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>Our Main Campus</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/Admission" className="nav-link">
+                                        <a href="/Admin/Admission" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>Admission for 2021</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/Concerns" className="nav-link">
+                                        <a href="/Admin/Concerns" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>Concerns</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/Carousel" className="nav-link">
+                                        <a href="/Admin/Carousel" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>Carousell</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/RoadToBe" className="nav-link">
+                                        <a href="/Admin/RoadToBe" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>RoadToBe</p>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/RightNemu" className="nav-link">
+                                        <a href="/Admin/RightMenu" className="nav-link">
                                             <i className="far fa-circle nav-icon" />
                                             <p>RightMenu</p>
                                         </a>
