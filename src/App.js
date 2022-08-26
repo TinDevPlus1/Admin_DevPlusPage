@@ -9,7 +9,7 @@ import SkillBox from "./Page/SkillBox/SkillBox";
 import Campus from "./Page/Campus";
 import Admission from "./Page/Admission";
 import Concerns from "./Page/Concerns";
-import Carousel from "./Page/Carousel";
+import Carousel from "./Page/Carousel/Carousel";
 import RoadToBe from "./Page/RoadToBe";
 import RightMenu from "./Page/RightMenu";
 
