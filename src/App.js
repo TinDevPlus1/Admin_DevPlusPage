@@ -1,19 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/Header';
-import SideNav from './components/SideNav';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Banner from './Page/Banner';
-import AboutDev from './Page/AboutDev';
-import SkillBox from './Page/SkillBox';
-import Campus from './Page/Campus';
-import Admission from './Page/Admission';
-import Concerns from './Page/Concerns';
-import Carousel from './Page/Carousel';
-import RoadToBe from './Page/RoadToBe';
-import RightMenu from './Page/RightMenu';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import SideNav from "./components/SideNav";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Banner from "./Page/Banner";
+// import AboutDev from "./Page/AboutDev";
+import SkillBox from "./Page/SkillBox";
+import Campus from "./Page/Campus";
+import Admission from "./Page/Admission";
+import Concerns from "./Page/Concerns";
+import Carousel from "./Page/Carousel";
+import RoadToBe from "./Page/RoadToBe";
+import RightMenu from "./Page/RightMenu";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Admin/Banner" element={<Banner />} />
-          <Route path="/Admin/AboutDev" element={<AboutDev />} />
+          {/* <Route path="/Admin/AboutDev" element={<AboutDev />} /> */}
           <Route path="/Admin/SkillBox" element={<SkillBox />} />
           <Route path="/Admin/Campus" element={<Campus />} />
           <Route path="/Admin/Admission" element={<Admission />} />
