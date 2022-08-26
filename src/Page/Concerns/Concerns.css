@@ -1,0 +1,18 @@
+tr #icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+tr .btn{
+    margin-top: 10px;
+}
+
+.button-handle{
+    width: 200px;
+}
+
+#table-skillbox{
+    margin-top: 15px;
+}
