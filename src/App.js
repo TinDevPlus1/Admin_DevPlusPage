@@ -8,7 +8,7 @@ import Banner from "./Page/Banner";
 import SkillBox from "./Page/SkillBox/SkillBox";
 import Campus from "./Page/OurMain/Ourmain";
 import Admission from "./Page/Admission";
-import Concerns from "./Page/Concerns";
+import Concerns from "./Page/Concerns/Concerns";
 import Carousel from "./Page/Carousel/Carousel";
 import RoadToBe from "./Page/RoadToBe";
 import RightMenu from "./Page/RightMenu";
