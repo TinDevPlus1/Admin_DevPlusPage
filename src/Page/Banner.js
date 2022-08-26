@@ -19,30 +19,34 @@ const Banner = () => {
   const [buttonContent, setButtonContent] = useState("");
   const [fileName, setFileName] = useState(null);
   let a = banners._id;
-  useEffect(() => {
-    BannerService.getBanner()
+
+  const fetchData = async () => {
+    await BannerService.getBanner()
       .then((res) => {
         res.data.map((item) => setBanner(item));
       })
       .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    fetchData();
   }, []);
   console.log(a);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
-  function handleOnClickSaveButton() {
+  const updateData = async () => {
     const formData = new FormData();
     formData.append("image", fileName);
     formData.append("title", title);
     formData.append("subTitle", subTitle);
     formData.append("buttonContent", buttonContent);
-    BannerService.updateBanner(a, formData);
-    BannerService.getBanner()
-      .then((res) => {
-        res.data.map((item) => setBanner(item));
-      })
-      .catch((err) => console.log(err));
+    await BannerService.updateBanner(a, formData);
+  };
+
+  function handleOnClickSaveButton() {
+    updateData();
+    setTimeout(fetchData, 5000);
   }
 
   return (
