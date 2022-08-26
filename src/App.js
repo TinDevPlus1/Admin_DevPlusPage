@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import Banner from "./Page/Banner";
 // import AboutDev from "./Page/AboutDev";
 import SkillBox from "./Page/SkillBox/SkillBox";
-import Campus from "./Page/Campus";
+import Campus from "./Page/OurMain/Ourmain";
 import Admission from "./Page/Admission";
 import Concerns from "./Page/Concerns";
 import Carousel from "./Page/Carousel/Carousel";
