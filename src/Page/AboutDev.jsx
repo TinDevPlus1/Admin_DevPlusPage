@@ -63,6 +63,8 @@ const AboutDev = () => {
   };
 
   return (
+    <div style={{ margin: "0px 0px 0px 250px" }} className="content-wrapper">
+    <div className="container mt-3" style={{ margin: "0px 0px 0px 20px" }}>
     <Row className="form" style={{ width: "80%", margin: "auto" }}>
       <Col>
         <h1 style={{ textAlign: "center" }}>AboutDev</h1>
@@ -195,7 +197,9 @@ const AboutDev = () => {
           />{" "}
         </div>
       </Col>
-    </Row>
+        </Row>
+      </div>
+      </div>
   );
 };
 

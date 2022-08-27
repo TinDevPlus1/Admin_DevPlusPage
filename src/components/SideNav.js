@@ -88,18 +88,6 @@ const SideNav = () => {
                                             <p>Carousell</p>
                                         </a>
                                     </li>
-                                    <li className="nav-item">
-                                        <a href="/Admin/RoadToBe" className="nav-link">
-                                            <i className="far fa-circle nav-icon" />
-                                            <p>RoadToBe</p>
-                                        </a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a href="/Admin/RightMenu" className="nav-link">
-                                            <i className="far fa-circle nav-icon" />
-                                            <p>RightMenu</p>
-                                        </a>
-                                    </li>
                                 </ul>
                             </li>
                         </ul>
