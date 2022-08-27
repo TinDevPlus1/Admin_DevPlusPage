@@ -37,7 +37,7 @@ const Carousel = () => {
       formData.append("sub_text", subtitle);
       formData.append("contentItem", content);
       formData.append("image", fileName);
-      CarouselService.postCard(formData);
+      await CarouselService.postCard(formData);
       getCard();
     } catch (err) {
       alert(err);
@@ -50,7 +50,7 @@ const Carousel = () => {
     formData.append("sub_text", subtitle);
     formData.append("contentItem", content);
     formData.append("image", fileName);
-    CarouselService.updateCard(id, formData);
+    await CarouselService.updateCard(id, formData);
     getCard();
   };
 
