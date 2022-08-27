@@ -4,7 +4,7 @@ import SideNav from "./components/SideNav";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Banner from "./Page/Banner";
-// import AboutDev from "./Page/AboutDev";
+import AboutDev from "./Page/AboutDev";
 import SkillBox from "./Page/SkillBox/SkillBox";
 import Campus from "./Page/OurMain/Ourmain";
 import Admission from "./Page/Admission";
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Admin/Banner" element={<Banner />} />
-          {/* <Route path="/Admin/AboutDev" element={<AboutDev />} /> */}
+          <Route path="/Admin/AboutDev" element={<AboutDev />} />
           <Route path="/Admin/SkillBox" element={<SkillBox />} />
           <Route path="/Admin/Campus" element={<Campus />} />
           <Route path="/Admin/Admission" element={<Admission />} />

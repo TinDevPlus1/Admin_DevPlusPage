@@ -33,7 +33,7 @@ const OurMain = () => {
       const formData = new FormData();
       formData.append("nameItem", name);
       formData.append("image", fileName);
-      OurmainService.postCard(formData);
+      await OurmainService.postCard(formData);
       getCard();
     } catch (err) {
       alert(err);
@@ -44,7 +44,7 @@ const OurMain = () => {
     const formData = new FormData();
     formData.append("nameItem", name);
     formData.append("image", fileName);
-    OurmainService.updateCard(id, formData);
+    await OurmainService.updateCard(id, formData);
     getCard();
   };
 
