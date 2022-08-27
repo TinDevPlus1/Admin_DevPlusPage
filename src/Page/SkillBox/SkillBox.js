@@ -35,7 +35,7 @@ const SkillBox = () => {
       formData.append("title", title);
       formData.append('courses',courses)
       formData.append("image", fileName);
-      SkillBoxService.postCard(formData);
+      await SkillBoxService.postCard(formData);
       getCard();
     } catch (err) {
       alert(err);
@@ -47,7 +47,7 @@ const SkillBox = () => {
     formData.append("title", title);
     formData.append('courses', courses)
     formData.append("image", fileName);
-    SkillBoxService.updateCard(id, formData);
+    await SkillBoxService.updateCard(id, formData);
     getCard();
   };
 
